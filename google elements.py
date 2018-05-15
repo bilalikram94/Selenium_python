@@ -26,12 +26,16 @@ class searchById ():
 
         if search is not None:
             print("keys sent")
+        find1 = driver.find_element_by_xpath("//input[@name='btnK']")
+        find1.click()
 
-        return search.send_keys()
-        FindByLinkText = driver.find_element_by_link_text("Horse")
+        #return search
+        #time.sleep(20)
+
+        FindByLinkText = driver.find_element_by_partial_link_text("Hors")
         if FindByLinkText is not None:
             print("element found by link text")
-        time.sleep(20)
+
 
 
 ff = searchById()
