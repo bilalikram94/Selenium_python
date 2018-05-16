@@ -44,17 +44,19 @@ class Login:
         if FindElementByName is not None:
             print("Sender email added")
 
+        
         FindElementByClassName = driver.find_element_by_xpath("//div[@class='Am Al editable LW-avf']")
         FindElementByClassName.click()
-        FindElementByClassName.send_keys("type message to print")
+        FindElementByClassName.send_keys("Type Message to recipient")
+        FindElementByClassName.send_keys(Keys.CONTROL+Keys.ENTER)
         if FindElementByClassName is not None:
             print("Message Typed")
-
-        FindElementByClassName1 = driver.find_element_by_class_name("//div[@xpath='1']")
-        FindElementByClassName1.click()
-        if FindElementByClassName1 is not None:
             print("Mission Complete")
-        time.sleep(3)
+
+       # FindElementByClassName1 = driver.find_element_by_css_selector("T-I J-J5-Ji aoO T-I-atl L3").send_keys(Keys.CONTROL+Keys.ENTER)
+       # if FindElementByClassName1 is not None:
+        #    print("Mission Complete")
+       # time.sleep(3)
 
 
 ff = Login()
