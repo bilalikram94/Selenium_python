@@ -22,26 +22,27 @@ class Login:
             print("element found by XPATH")
         FindElementByXpath.send_keys("#Enter Your Email")
 
-        FindElementByCSS = driver.find_element_by_xpath("//div[@id='identifierNext']")
-        FindElementByCSS.click()
-        if FindElementByCSS is not None:
+        FindElementByXpath1 = driver.find_element_by_xpath("//div[@id='identifierNext']")
+        FindElementByXpath1.click()
+        if FindElementByXpath1 is not None:
             print("Element found by Xpath")
         time.sleep(3)
-        FindElementByXpath1 = driver.find_element_by_xpath("//input[@name='password']")
-        FindElementByXpath1.send_keys("#enter password")
-        if FindElementByXpath1 is not None:
+
+        FindElementByXpath2 = driver.find_element_by_xpath("//input[@name='password']")
+        FindElementByXpath2.send_keys("#enter password")
+        if FindElementByXpath2 is not None:
             print("Password entered through Xpath")
 
-        FindElementByXpath2 = driver.find_element_by_xpath("//div[@id='passwordNext']")
-        FindElementByXpath2.click()
-        if FindElementByXpath2 is not None:
+        FindElementByXpath3 = driver.find_element_by_xpath("//div[@id='passwordNext']")
+        FindElementByXpath3.click()
+        if FindElementByXpath3 is not None:
             print("Login Successful")
 
         time.sleep(10)
 
-        FindElementByXpath3 = driver.find_element_by_css_selector(".T-I-KE")
-        FindElementByXpath3.click()
-        if FindElementByXpath3 is not None:
+        FindElementByCSS2 = driver.find_element_by_css_selector(".T-I-KE")
+        FindElementByCSS2.click()
+        if FindElementByCSS2 is not None:
             print("Composing Email")
 
         time.sleep(5)
