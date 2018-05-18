@@ -1,5 +1,5 @@
 from selenium import webdriver
-import  time
+import time
 from selenium.webdriver.common.keys import Keys
 
 class Login:
@@ -37,9 +37,16 @@ class Login:
         if FindElementByXpath2 is not None:
             print("Login Successful")
 
+        time.sleep(10)
+
+        FindElementByXpath3 = driver.find_element_by_css_selector(".T-I-KE")
+        FindElementByXpath3.click()
+        if FindElementByXpath3 is not None:
+            print("Composing Email")
+
         time.sleep(5)
- 	
-	FindElementByName = driver.find_element_by_name("to")
+
+        FindElementByName = driver.find_element_by_name("to")
         FindElementByName.click()
         FindElementByName.send_keys("Recipient Email")
         if FindElementByName is not None:
